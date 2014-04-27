@@ -1,0 +1,21 @@
+<h1>SendSMS - Ewapi</h1>
+
+<%= form_for :sms, :url => {:action => "create"} do |f| %>
+
+	<%= f.label :username %>
+	<%= f.text_field :username %>
+	
+	<%= f.label :password %>
+	<%= f.text_field :password %>
+	
+	<%= f.label :sender %>
+	<%= f.text_field :sender %>
+	
+	<%= f.label :to %>
+	<%= f.text_field :to %>
+
+	<%= f.label :body %>
+	<%= f.text_area :body %>
+	
+	<%= f.submit "Send SMS", class: "btn btn-large btn-primary" %>
+<% end %>

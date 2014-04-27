@@ -1,0 +1,2 @@
+module EwapiHelper
+end
