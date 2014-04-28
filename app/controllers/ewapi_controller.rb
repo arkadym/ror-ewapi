@@ -1,7 +1,6 @@
 require 'savon'
 
 class EwapiController < ApplicationController
-  
   def index
 	@sms = Sms.new
   end
@@ -17,6 +16,9 @@ class EwapiController < ApplicationController
 
 	@response = call_and_fail_gracefully(client, :send_sms2, :message => { 'userName' => sms.username, 'password' => sms.password, 'toMobile' => sms.to, 'recipientName' => sms.to, 'senderID' => sms.sender, 'smsText' => sms.body, 'SMSType' => '', 'Apptype' => '', 'taskName' => '', 'timeOffset' => 0, 'priority' => 3 })
 	logger.debug "Response - #{@response}"
+	
+	#sms = sms_params
+	#@response = sms.username
   end
   
   private

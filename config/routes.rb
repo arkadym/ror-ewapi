@@ -1,6 +1,5 @@
 SendSMS::Application.routes.draw do
   get "ewapi/index"
-  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -13,14 +12,9 @@ SendSMS::Application.routes.draw do
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
-  resources :ewapi do
-	member do
-		post 'send'
-	end
-  end
-  
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
+  resources :ewapi
 
   # Example resource route with options:
   #   resources :products do
